@@ -34,3 +34,5 @@ c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\Lucid.Web
 c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\Lucid.Web.Portal.Tests\obj\Debug\ResolveAssemblyReference.cache
 c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\Lucid.Web.Portal.Tests\obj\Debug\Lucid.Web.Portal.Tests.dll
 c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\Lucid.Web.Portal.Tests\obj\Debug\Lucid.Web.Portal.Tests.pdb
+c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\Lucid.Web.Portal.Tests\bin\Debug\EntityFramework.dll
+c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\Lucid.Web.Portal.Tests\bin\Debug\EntityFramework.xml
