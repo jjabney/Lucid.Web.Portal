@@ -1,0 +1,59 @@
+@model IEnumerable<Lucid.Web.Portal.Models.Message>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th></th>
+        <th>
+            Content
+        </th>
+        <th>
+            From
+        </th>
+        <th>
+            To
+        </th>
+        <th>
+            Created
+        </th>
+        <th>
+            IsRead
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+        <td>
+			@item.Content
+        </td>
+        <td>
+			@item.From
+        </td>
+        <td>
+			@item.To
+        </td>
+        <td>
+			@String.Format("{0:g}", item.Created)
+        </td>
+        <td>
+			@item.IsRead
+        </td>
+    </tr>
+}
+
+</table>
+
+

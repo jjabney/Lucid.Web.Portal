@@ -122,16 +122,21 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\EmailAccountController.cs" />
+    <Compile Include="Controllers\ChiropractorsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Controllers\MessagesController.cs" />
+    <Compile Include="Controllers\PatientsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Chiropractor.cs" />
+    <Compile Include="Models\ChiropractorRepository.cs" />
     <Compile Include="Models\LucidWebPortalContext.cs" />
-    <Compile Include="Models\User.cs" />
-    <Compile Include="Models\UserRepository.cs" />
+    <Compile Include="Models\Message.cs" />
+    <Compile Include="Models\MessageRepository.cs" />
+    <Compile Include="Models\Patient.cs" />
+    <Compile Include="Models\PatientRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -241,22 +246,58 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Users\Create.cshtml" />
+    <Content Include="Views\Messages\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Users\Edit.cshtml" />
+    <Content Include="Views\Messages\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Users\Delete.cshtml" />
+    <Content Include="Views\Messages\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Users\Details.cshtml" />
+    <Content Include="Views\Messages\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\Messages\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Users\_CreateOrEdit.cshtml" />
+    <Content Include="Views\Messages\_CreateOrEdit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Patients\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Patients\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Patients\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Patients\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Patients\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Patients\_CreateOrEdit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Chiropractors\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Chiropractors\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Chiropractors\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Chiropractors\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Chiropractors\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Chiropractors\_CreateOrEdit.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

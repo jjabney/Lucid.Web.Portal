@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="b8dfd263-e38d-45eb-8e3d-e1ad6628a324" name="jabney@LAPJABNEY 2013-06-19 17:32:24" runUser="IHT-PDX\jabney" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="0eccabc0-8f87-4cf9-bbe5-000719848a39">
+    <Deployment userDeploymentRoot="c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\TestResults" useDefaultDeploymentRoot="false" runDeploymentRoot="jabney_LAPJABNEY 2013-06-19 17_32_24">
+      <DeploymentItem filename="c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.dll" />
+      <DeploymentItem filename="c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll" />
+      <DeploymentItem filename="c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll" />
+      <DeploymentItem filename="c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll" />
+      <DeploymentItem filename="c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll" />
+      <DeploymentItem filename="c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll" />
+      <DeploymentItem filename="c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll" />
+      <DeploymentItem filename="c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll" />
+      <DeploymentItem filename="c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll" />
+      <DeploymentItem filename="c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll" />
+      <DeploymentItem filename="c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll" />
+      <DeploymentItem filename="c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll" />
+      <DeploymentItem filename="c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll" />
+      <DeploymentItem filename="c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\Lucid.Web.Portal\bin\Lucid.Web.Portal.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-06-19T17:32:24.1262344-07:00" queuing="2013-06-19T17:32:25.0252858-07:00" start="2013-06-19T17:32:25.1242915-07:00" finish="2013-06-19T17:32:29.7375554-07:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Post" storage="c:\users\jabney\documents\visual studio 2010\projects\lucid.web.portal\lucid.web.portal.tests\bin\debug\lucid.web.portal.tests.dll" id="fc01d017-3870-f9ab-aa8a-f3a96d1ca13f">
+      <Execution id="9ca10531-3280-4591-ad18-36a5c480a4fc" />
+      <TestMethod codeBase="c:/users/jabney/documents/visual studio 2010/Projects/Lucid.Web.Portal/Lucid.Web.Portal.Tests/bin/Debug/Lucid.Web.Portal.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Lucid.Web.Portal.Tests.Controllers.UsersControllerTest, Lucid.Web.Portal.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Post" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="fc01d017-3870-f9ab-aa8a-f3a96d1ca13f" executionId="9ca10531-3280-4591-ad18-36a5c480a4fc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="9ca10531-3280-4591-ad18-36a5c480a4fc" testId="fc01d017-3870-f9ab-aa8a-f3a96d1ca13f" testName="Post" computerName="LAPJABNEY" duration="00:00:02.3489669" startTime="2013-06-19T17:32:25.1552933-07:00" endTime="2013-06-19T17:32:28.1834665-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9ca10531-3280-4591-ad18-36a5c480a4fc">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method Lucid.Web.Portal.Tests.Controllers.UsersControllerTest.Post threw exception: 
+System.Data.SqlClient.SqlException: CREATE DATABASE permission denied in database 'master'.</Message>
+          <StackTrace>    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.SqlClient.SqlProviderServices.&lt;&gt;c__DisplayClassa.&lt;DbCreateDatabase&gt;b__7(SqlConnection conn)
+   at System.Data.SqlClient.SqlProviderServices.UsingConnection(SqlConnection sqlConnection, Action`1 act)
+   at System.Data.SqlClient.SqlProviderServices.UsingMasterConnection(SqlConnection sqlConnection, Action`1 act)
+   at System.Data.SqlClient.SqlProviderServices.DbCreateDatabase(DbConnection connection, Nullable`1 commandTimeout, StoreItemCollection storeItemCollection)
+   at System.Data.Objects.ObjectContext.CreateDatabase()
+   at System.Data.Entity.Migrations.Utilities.DatabaseCreator.Create(DbConnection connection)
+   at System.Data.Entity.Migrations.DbMigrator.EnsureDatabaseExists()
+   at System.Data.Entity.Migrations.DbMigrator.Update(String targetMigration)
+   at System.Data.Entity.Internal.DatabaseCreator.CreateDatabase(InternalContext internalContext, Func`3 createMigrator, ObjectContext objectContext)
+   at System.Data.Entity.Internal.InternalContext.CreateDatabase(ObjectContext objectContext)
+   at System.Data.Entity.Database.Create(Boolean skipExistsCheck)
+   at System.Data.Entity.DropCreateDatabaseIfModelChanges`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Database.&lt;&gt;c__DisplayClass2`1.&lt;SetInitializerInternal&gt;b__0(DbContext c)
+   at System.Data.Entity.Internal.InternalContext.&lt;&gt;c__DisplayClass8.&lt;PerformDatabaseInitialization&gt;b__6()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.&lt;InitializeDatabase&gt;b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Add(Object entity)
+   at System.Data.Entity.DbSet`1.Add(TEntity entity)
+   at Lucid.Web.Portal.Models.UserRepository.InsertOrUpdate(User user) in c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\Lucid.Web.Portal\Models\UserRepository.cs:line 38
+   at Lucid.Web.Portal.Controllers.UsersController.Create(User user) in c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\Lucid.Web.Portal\Controllers\UsersController.cs:line 55
+   at Lucid.Web.Portal.Tests.Controllers.UsersControllerTest.Post() in c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\Lucid.Web.Portal.Tests\Controllers\UsersControllerTest.cs:line 23
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

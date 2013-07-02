@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="8de7cda8-d44c-4cd6-9768-3721f5240cba" name="jabney@LAPJABNEY 2013-06-19 18:14:22" runUser="IHT-PDX\jabney" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="99c2f112-ee43-43c3-b7b8-3b02adcb2bf7">
+    <Deployment runDeploymentRoot="jabney_LAPJABNEY 2013-06-19 18_14_22">
+      <DeploymentItem filename="c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.dll" />
+      <DeploymentItem filename="c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll" />
+      <DeploymentItem filename="c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll" />
+      <DeploymentItem filename="c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll" />
+      <DeploymentItem filename="c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll" />
+      <DeploymentItem filename="c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll" />
+      <DeploymentItem filename="c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll" />
+      <DeploymentItem filename="c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll" />
+      <DeploymentItem filename="c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll" />
+      <DeploymentItem filename="c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll" />
+      <DeploymentItem filename="c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll" />
+      <DeploymentItem filename="c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll" />
+      <DeploymentItem filename="c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll" />
+      <DeploymentItem filename="c:\users\jabney\documents\visual studio 2010\Projects\Lucid.Web.Portal\Lucid.Web.Portal\bin\Lucid.Web.Portal.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-06-19T18:14:22.4152723-07:00" queuing="2013-06-19T18:14:25.1234272-07:00" start="2013-06-19T18:14:25.2174326-07:00" finish="2013-06-19T18:14:31.1477718-07:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="6" executed="6" passed="6" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Post" storage="c:\users\jabney\documents\visual studio 2010\projects\lucid.web.portal\lucid.web.portal.tests\bin\debug\lucid.web.portal.tests.dll" id="e7f38b65-10d6-369d-598a-55a4994530ef">
+      <Execution id="dcfd077a-9834-40af-a445-b1bd41f12edb" />
+      <TestMethod codeBase="c:/users/jabney/documents/visual studio 2010/Projects/Lucid.Web.Portal/Lucid.Web.Portal.Tests/bin/Debug/Lucid.Web.Portal.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Lucid.Web.Portal.Tests.Controllers.ValuesControllerTest, Lucid.Web.Portal.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Post" />
+    </UnitTest>
+    <UnitTest name="Delete" storage="c:\users\jabney\documents\visual studio 2010\projects\lucid.web.portal\lucid.web.portal.tests\bin\debug\lucid.web.portal.tests.dll" id="06fe81ab-efb5-3204-518c-a0eb8090cb97">
+      <Execution id="cf18f219-a95c-45f7-92b9-40e6afe9ff96" />
+      <TestMethod codeBase="c:/users/jabney/documents/visual studio 2010/Projects/Lucid.Web.Portal/Lucid.Web.Portal.Tests/bin/Debug/Lucid.Web.Portal.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Lucid.Web.Portal.Tests.Controllers.ValuesControllerTest, Lucid.Web.Portal.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Delete" />
+    </UnitTest>
+    <UnitTest name="Get" storage="c:\users\jabney\documents\visual studio 2010\projects\lucid.web.portal\lucid.web.portal.tests\bin\debug\lucid.web.portal.tests.dll" id="23039cf7-24c8-81c9-92ad-feed554e2832">
+      <Execution id="ce5ef6a6-e502-4ca5-a1eb-3befacd141ed" />
+      <TestMethod codeBase="c:/users/jabney/documents/visual studio 2010/Projects/Lucid.Web.Portal/Lucid.Web.Portal.Tests/bin/Debug/Lucid.Web.Portal.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Lucid.Web.Portal.Tests.Controllers.ValuesControllerTest, Lucid.Web.Portal.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Get" />
+    </UnitTest>
+    <UnitTest name="Put" storage="c:\users\jabney\documents\visual studio 2010\projects\lucid.web.portal\lucid.web.portal.tests\bin\debug\lucid.web.portal.tests.dll" id="cc45d3af-4115-a97c-3467-3c741b5a9a8e">
+      <Execution id="146e6d72-88f3-4cbb-99ab-174072377973" />
+      <TestMethod codeBase="c:/users/jabney/documents/visual studio 2010/Projects/Lucid.Web.Portal/Lucid.Web.Portal.Tests/bin/Debug/Lucid.Web.Portal.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Lucid.Web.Portal.Tests.Controllers.ValuesControllerTest, Lucid.Web.Portal.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Put" />
+    </UnitTest>
+    <UnitTest name="GetById" storage="c:\users\jabney\documents\visual studio 2010\projects\lucid.web.portal\lucid.web.portal.tests\bin\debug\lucid.web.portal.tests.dll" id="35edb294-5195-e95a-6379-54b623c0bb23">
+      <Execution id="f8e0a55b-9bad-452f-b735-bba13dae6516" />
+      <TestMethod codeBase="c:/users/jabney/documents/visual studio 2010/Projects/Lucid.Web.Portal/Lucid.Web.Portal.Tests/bin/Debug/Lucid.Web.Portal.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Lucid.Web.Portal.Tests.Controllers.ValuesControllerTest, Lucid.Web.Portal.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetById" />
+    </UnitTest>
+    <UnitTest name="Post" storage="c:\users\jabney\documents\visual studio 2010\projects\lucid.web.portal\lucid.web.portal.tests\bin\debug\lucid.web.portal.tests.dll" id="fc01d017-3870-f9ab-aa8a-f3a96d1ca13f">
+      <Execution id="c736708f-e852-4029-a113-67c02c9429b7" />
+      <TestMethod codeBase="c:/users/jabney/documents/visual studio 2010/Projects/Lucid.Web.Portal/Lucid.Web.Portal.Tests/bin/Debug/Lucid.Web.Portal.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Lucid.Web.Portal.Tests.Controllers.UsersControllerTest, Lucid.Web.Portal.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Post" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="23039cf7-24c8-81c9-92ad-feed554e2832" executionId="ce5ef6a6-e502-4ca5-a1eb-3befacd141ed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="35edb294-5195-e95a-6379-54b623c0bb23" executionId="f8e0a55b-9bad-452f-b735-bba13dae6516" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e7f38b65-10d6-369d-598a-55a4994530ef" executionId="dcfd077a-9834-40af-a445-b1bd41f12edb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cc45d3af-4115-a97c-3467-3c741b5a9a8e" executionId="146e6d72-88f3-4cbb-99ab-174072377973" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="06fe81ab-efb5-3204-518c-a0eb8090cb97" executionId="cf18f219-a95c-45f7-92b9-40e6afe9ff96" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fc01d017-3870-f9ab-aa8a-f3a96d1ca13f" executionId="c736708f-e852-4029-a113-67c02c9429b7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="ce5ef6a6-e502-4ca5-a1eb-3befacd141ed" testId="23039cf7-24c8-81c9-92ad-feed554e2832" testName="Get" computerName="LAPJABNEY" duration="00:00:00.0860568" startTime="2013-06-19T18:14:25.2764360-07:00" endTime="2013-06-19T18:14:28.2086037-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ce5ef6a6-e502-4ca5-a1eb-3befacd141ed">
+    </UnitTestResult>
+    <UnitTestResult executionId="f8e0a55b-9bad-452f-b735-bba13dae6516" testId="35edb294-5195-e95a-6379-54b623c0bb23" testName="GetById" computerName="LAPJABNEY" duration="00:00:00.0006761" startTime="2013-06-19T18:14:28.2336051-07:00" endTime="2013-06-19T18:14:28.2476059-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f8e0a55b-9bad-452f-b735-bba13dae6516">
+    </UnitTestResult>
+    <UnitTestResult executionId="dcfd077a-9834-40af-a445-b1bd41f12edb" testId="e7f38b65-10d6-369d-598a-55a4994530ef" testName="Post" computerName="LAPJABNEY" duration="00:00:00.0005915" startTime="2013-06-19T18:14:28.2836080-07:00" endTime="2013-06-19T18:14:28.2956086-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dcfd077a-9834-40af-a445-b1bd41f12edb">
+    </UnitTestResult>
+    <UnitTestResult executionId="146e6d72-88f3-4cbb-99ab-174072377973" testId="cc45d3af-4115-a97c-3467-3c741b5a9a8e" testName="Put" computerName="LAPJABNEY" duration="00:00:00.0005492" startTime="2013-06-19T18:14:28.3166098-07:00" endTime="2013-06-19T18:14:28.3306106-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="146e6d72-88f3-4cbb-99ab-174072377973">
+    </UnitTestResult>
+    <UnitTestResult executionId="cf18f219-a95c-45f7-92b9-40e6afe9ff96" testId="06fe81ab-efb5-3204-518c-a0eb8090cb97" testName="Delete" computerName="LAPJABNEY" duration="00:00:00.0005369" startTime="2013-06-19T18:14:28.3456115-07:00" endTime="2013-06-19T18:14:28.3576122-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cf18f219-a95c-45f7-92b9-40e6afe9ff96">
+    </UnitTestResult>
+    <UnitTestResult executionId="c736708f-e852-4029-a113-67c02c9429b7" testId="fc01d017-3870-f9ab-aa8a-f3a96d1ca13f" testName="Post" computerName="LAPJABNEY" duration="00:00:02.3993826" startTime="2013-06-19T18:14:28.3716130-07:00" endTime="2013-06-19T18:14:30.7827509-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c736708f-e852-4029-a113-67c02c9429b7">
+    </UnitTestResult>
+  </Results>
+</TestRun>

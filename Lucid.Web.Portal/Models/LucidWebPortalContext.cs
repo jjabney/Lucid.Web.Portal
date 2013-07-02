@@ -20,6 +20,11 @@ namespace Lucid.Web.Portal.Models
             System.Data.Entity.Database.SetInitializer(new System.Data.Entity.DropCreateDatabaseIfModelChanges<Lucid.Web.Portal.Models.LucidWebPortalContext>());
         }
 
-        public DbSet<Lucid.Web.Portal.Models.User> Users { get; set; }
+   
+        public DbSet<Lucid.Web.Portal.Models.Message> Messages { get; set; }
+
+        public DbSet<Lucid.Web.Portal.Models.Patient> Patients { get; set; }
+
+        public DbSet<Lucid.Web.Portal.Models.Chiropractor> Chiropractors { get; set; }
     }
 }
