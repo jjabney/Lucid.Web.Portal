@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="210622f5-2931-4aef-bd7e-884883b78ce0" name="jabney@LAPJABNEY 2013-07-17 14:20:53" runUser="IHT-PDX\jabney" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="c9dac7e6-b193-4df1-8c8d-45f331c881a8">
+    <Deployment userDeploymentRoot="C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\TestResults" useDefaultDeploymentRoot="false" runDeploymentRoot="jabney_LAPJABNEY 2013-07-17 14_20_53">
+      <DeploymentItem filename="C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll" />
+      <DeploymentItem filename="C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\Lucid.Web.Portal\bin\Lucid.Web.Portal.dll" />
+      <DeploymentItem filename="C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll" />
+      <DeploymentItem filename="C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll" />
+      <DeploymentItem filename="C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll" />
+      <DeploymentItem filename="C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll" />
+      <DeploymentItem filename="C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.dll" />
+      <DeploymentItem filename="C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll" />
+      <DeploymentItem filename="C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll" />
+      <DeploymentItem filename="C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll" />
+      <DeploymentItem filename="C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll" />
+      <DeploymentItem filename="C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll" />
+      <DeploymentItem filename="C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll" />
+      <DeploymentItem filename="C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-07-17T14:20:53.4967603-07:00" queuing="2013-07-17T14:20:54.5907603-07:00" start="2013-07-17T14:20:54.7227603-07:00" finish="2013-07-17T14:21:15.0807603-07:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="1" executed="1" error="0" failed="0" timeout="0" aborted="1" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="LAPJABNEY" outcome="Error" timestamp="2013-07-17T14:21:15.0797603-07:00">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="ChiroToPatientMessage" storage="c:\users\jabney\documents\github\lucid.web.portal\lucid.web.portal.tests\bin\debug\lucid.web.portal.tests.dll" id="367fe128-c1b3-d6ec-bb86-c5005a5347cc">
+      <Execution id="9c2c8ae2-ff7a-45f3-9d20-e402baa83de4" />
+      <TestMethod codeBase="C:/Users/jabney/Documents/GitHub/Lucid.Web.Portal/Lucid.Web.Portal.Tests/bin/Debug/Lucid.Web.Portal.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Lucid.Web.Portal.Tests.Controllers.MessagesControllerTest, Lucid.Web.Portal.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ChiroToPatientMessage" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="367fe128-c1b3-d6ec-bb86-c5005a5347cc" executionId="9c2c8ae2-ff7a-45f3-9d20-e402baa83de4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="9c2c8ae2-ff7a-45f3-9d20-e402baa83de4" testId="367fe128-c1b3-d6ec-bb86-c5005a5347cc" testName="ChiroToPatientMessage" computerName="LAPJABNEY" duration="00:00:20.2450000" startTime="2013-07-17T14:20:54.8357603-07:00" endTime="2013-07-17T14:21:15.0807603-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9c2c8ae2-ff7a-45f3-9d20-e402baa83de4">
+    </UnitTestResult>
+  </Results>
+</TestRun>

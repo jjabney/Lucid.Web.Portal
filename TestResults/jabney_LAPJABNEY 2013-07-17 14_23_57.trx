@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="e7d52775-0829-4e8c-ab05-6438d2e7553f" name="jabney@LAPJABNEY 2013-07-17 14:23:57" runUser="IHT-PDX\jabney" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="ff881c9c-1cf6-4f1f-87de-bb68d7aa742f">
+    <Deployment runDeploymentRoot="jabney_LAPJABNEY 2013-07-17 14_23_57">
+      <DeploymentItem filename="C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll" />
+      <DeploymentItem filename="C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\Lucid.Web.Portal\bin\Lucid.Web.Portal.dll" />
+      <DeploymentItem filename="C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll" />
+      <DeploymentItem filename="C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll" />
+      <DeploymentItem filename="C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll" />
+      <DeploymentItem filename="C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll" />
+      <DeploymentItem filename="C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.dll" />
+      <DeploymentItem filename="C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll" />
+      <DeploymentItem filename="C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll" />
+      <DeploymentItem filename="C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll" />
+      <DeploymentItem filename="C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll" />
+      <DeploymentItem filename="C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll" />
+      <DeploymentItem filename="C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll" />
+      <DeploymentItem filename="C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-07-17T14:23:57.1587603-07:00" queuing="2013-07-17T14:23:58.0927603-07:00" start="2013-07-17T14:23:58.1327603-07:00" finish="2013-07-17T14:24:02.3667603-07:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="7" executed="7" passed="7" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="ChiroToPatientMessage" storage="c:\users\jabney\documents\github\lucid.web.portal\lucid.web.portal.tests\bin\debug\lucid.web.portal.tests.dll" id="367fe128-c1b3-d6ec-bb86-c5005a5347cc">
+      <Execution id="6df5e3ec-dce1-41aa-8241-e61a533d19fb" />
+      <TestMethod codeBase="C:/Users/jabney/Documents/GitHub/Lucid.Web.Portal/Lucid.Web.Portal.Tests/bin/Debug/Lucid.Web.Portal.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Lucid.Web.Portal.Tests.Controllers.MessagesControllerTest, Lucid.Web.Portal.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ChiroToPatientMessage" />
+    </UnitTest>
+    <UnitTest name="Post" storage="c:\users\jabney\documents\github\lucid.web.portal\lucid.web.portal.tests\bin\debug\lucid.web.portal.tests.dll" id="e7f38b65-10d6-369d-598a-55a4994530ef">
+      <Execution id="6b9295ba-157f-4700-acce-08804a5a4845" />
+      <TestMethod codeBase="C:/Users/jabney/Documents/GitHub/Lucid.Web.Portal/Lucid.Web.Portal.Tests/bin/Debug/Lucid.Web.Portal.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Lucid.Web.Portal.Tests.Controllers.ValuesControllerTest, Lucid.Web.Portal.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Post" />
+    </UnitTest>
+    <UnitTest name="Delete" storage="c:\users\jabney\documents\github\lucid.web.portal\lucid.web.portal.tests\bin\debug\lucid.web.portal.tests.dll" id="06fe81ab-efb5-3204-518c-a0eb8090cb97">
+      <Execution id="c42e4c86-cda9-41a9-a256-5639a384d91a" />
+      <TestMethod codeBase="C:/Users/jabney/Documents/GitHub/Lucid.Web.Portal/Lucid.Web.Portal.Tests/bin/Debug/Lucid.Web.Portal.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Lucid.Web.Portal.Tests.Controllers.ValuesControllerTest, Lucid.Web.Portal.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Delete" />
+    </UnitTest>
+    <UnitTest name="Get" storage="c:\users\jabney\documents\github\lucid.web.portal\lucid.web.portal.tests\bin\debug\lucid.web.portal.tests.dll" id="23039cf7-24c8-81c9-92ad-feed554e2832">
+      <Execution id="5a24b811-72fa-4a0a-9e17-ce332e9c7b88" />
+      <TestMethod codeBase="C:/Users/jabney/Documents/GitHub/Lucid.Web.Portal/Lucid.Web.Portal.Tests/bin/Debug/Lucid.Web.Portal.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Lucid.Web.Portal.Tests.Controllers.ValuesControllerTest, Lucid.Web.Portal.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Get" />
+    </UnitTest>
+    <UnitTest name="Put" storage="c:\users\jabney\documents\github\lucid.web.portal\lucid.web.portal.tests\bin\debug\lucid.web.portal.tests.dll" id="cc45d3af-4115-a97c-3467-3c741b5a9a8e">
+      <Execution id="e6bba2ed-aa65-457d-9f64-385e614ada0a" />
+      <TestMethod codeBase="C:/Users/jabney/Documents/GitHub/Lucid.Web.Portal/Lucid.Web.Portal.Tests/bin/Debug/Lucid.Web.Portal.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Lucid.Web.Portal.Tests.Controllers.ValuesControllerTest, Lucid.Web.Portal.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Put" />
+    </UnitTest>
+    <UnitTest name="GetById" storage="c:\users\jabney\documents\github\lucid.web.portal\lucid.web.portal.tests\bin\debug\lucid.web.portal.tests.dll" id="35edb294-5195-e95a-6379-54b623c0bb23">
+      <Execution id="50a528fb-6791-4b8c-ba33-7d5dc4957bb4" />
+      <TestMethod codeBase="C:/Users/jabney/Documents/GitHub/Lucid.Web.Portal/Lucid.Web.Portal.Tests/bin/Debug/Lucid.Web.Portal.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Lucid.Web.Portal.Tests.Controllers.ValuesControllerTest, Lucid.Web.Portal.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetById" />
+    </UnitTest>
+    <UnitTest name="Post" storage="c:\users\jabney\documents\github\lucid.web.portal\lucid.web.portal.tests\bin\debug\lucid.web.portal.tests.dll" id="fc01d017-3870-f9ab-aa8a-f3a96d1ca13f">
+      <Execution id="44c93fc9-8821-4fb5-8a7f-3ed6488a352f" />
+      <TestMethod codeBase="C:/Users/jabney/Documents/GitHub/Lucid.Web.Portal/Lucid.Web.Portal.Tests/bin/Debug/Lucid.Web.Portal.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Lucid.Web.Portal.Tests.Controllers.UsersControllerTest, Lucid.Web.Portal.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Post" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="23039cf7-24c8-81c9-92ad-feed554e2832" executionId="5a24b811-72fa-4a0a-9e17-ce332e9c7b88" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="35edb294-5195-e95a-6379-54b623c0bb23" executionId="50a528fb-6791-4b8c-ba33-7d5dc4957bb4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e7f38b65-10d6-369d-598a-55a4994530ef" executionId="6b9295ba-157f-4700-acce-08804a5a4845" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cc45d3af-4115-a97c-3467-3c741b5a9a8e" executionId="e6bba2ed-aa65-457d-9f64-385e614ada0a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="06fe81ab-efb5-3204-518c-a0eb8090cb97" executionId="c42e4c86-cda9-41a9-a256-5639a384d91a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fc01d017-3870-f9ab-aa8a-f3a96d1ca13f" executionId="44c93fc9-8821-4fb5-8a7f-3ed6488a352f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="367fe128-c1b3-d6ec-bb86-c5005a5347cc" executionId="6df5e3ec-dce1-41aa-8241-e61a533d19fb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="5a24b811-72fa-4a0a-9e17-ce332e9c7b88" testId="23039cf7-24c8-81c9-92ad-feed554e2832" testName="Get" computerName="LAPJABNEY" duration="00:00:00.0468882" startTime="2013-07-17T14:23:58.1607603-07:00" endTime="2013-07-17T14:23:59.3617603-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5a24b811-72fa-4a0a-9e17-ce332e9c7b88">
+    </UnitTestResult>
+    <UnitTestResult executionId="50a528fb-6791-4b8c-ba33-7d5dc4957bb4" testId="35edb294-5195-e95a-6379-54b623c0bb23" testName="GetById" computerName="LAPJABNEY" duration="00:00:00.0003271" startTime="2013-07-17T14:23:59.3767603-07:00" endTime="2013-07-17T14:23:59.3817603-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="50a528fb-6791-4b8c-ba33-7d5dc4957bb4">
+    </UnitTestResult>
+    <UnitTestResult executionId="6b9295ba-157f-4700-acce-08804a5a4845" testId="e7f38b65-10d6-369d-598a-55a4994530ef" testName="Post" computerName="LAPJABNEY" duration="00:00:00.0002606" startTime="2013-07-17T14:23:59.3917603-07:00" endTime="2013-07-17T14:23:59.3987603-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6b9295ba-157f-4700-acce-08804a5a4845">
+    </UnitTestResult>
+    <UnitTestResult executionId="e6bba2ed-aa65-457d-9f64-385e614ada0a" testId="cc45d3af-4115-a97c-3467-3c741b5a9a8e" testName="Put" computerName="LAPJABNEY" duration="00:00:00.0002602" startTime="2013-07-17T14:23:59.4077603-07:00" endTime="2013-07-17T14:23:59.4127603-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e6bba2ed-aa65-457d-9f64-385e614ada0a">
+    </UnitTestResult>
+    <UnitTestResult executionId="c42e4c86-cda9-41a9-a256-5639a384d91a" testId="06fe81ab-efb5-3204-518c-a0eb8090cb97" testName="Delete" computerName="LAPJABNEY" duration="00:00:00.0002417" startTime="2013-07-17T14:23:59.4207603-07:00" endTime="2013-07-17T14:23:59.4257603-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c42e4c86-cda9-41a9-a256-5639a384d91a">
+    </UnitTestResult>
+    <UnitTestResult executionId="44c93fc9-8821-4fb5-8a7f-3ed6488a352f" testId="fc01d017-3870-f9ab-aa8a-f3a96d1ca13f" testName="Post" computerName="LAPJABNEY" duration="00:00:00.0002147" startTime="2013-07-17T14:23:59.4387603-07:00" endTime="2013-07-17T14:23:59.4437603-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="44c93fc9-8821-4fb5-8a7f-3ed6488a352f">
+    </UnitTestResult>
+    <UnitTestResult executionId="6df5e3ec-dce1-41aa-8241-e61a533d19fb" testId="367fe128-c1b3-d6ec-bb86-c5005a5347cc" testName="ChiroToPatientMessage" computerName="LAPJABNEY" duration="00:00:01.3034861" startTime="2013-07-17T14:23:59.4527603-07:00" endTime="2013-07-17T14:24:00.7607603-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6df5e3ec-dce1-41aa-8241-e61a533d19fb">
+    </UnitTestResult>
+  </Results>
+</TestRun>

@@ -17,7 +17,7 @@ namespace Lucid.Web.Portal.Models
         // 
         public LucidWebPortalContext()
         {
-            System.Data.Entity.Database.SetInitializer(new System.Data.Entity.DropCreateDatabaseIfModelChanges<Lucid.Web.Portal.Models.LucidWebPortalContext>());
+            System.Data.Entity.Database.SetInitializer(new System.Data.Entity.DropCreateDatabaseIfModelChanges<LucidWebPortalContext>());
         }
 
    

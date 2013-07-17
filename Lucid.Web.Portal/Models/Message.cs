@@ -29,7 +29,7 @@ namespace Lucid.Web.Portal.Models
       
         public DateTime Created { get; private set; }
 
-        public bool IsRead { get; private set; }
+        public bool IsRead { get; set; }
 
 
         public override string ToString()

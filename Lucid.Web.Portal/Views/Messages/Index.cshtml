@@ -4,6 +4,41 @@
     ViewBag.Title = "Index";
 }
 
+@*@section scripts { 
+<script>
+    var apiUrl = 'api/emails';
+
+    $(document).ready(function () {
+        // Send an AJAX request 
+        $.getJSON(apiUrl)
+            .done(function (data) {
+                // On success, 'data' contains a list of products. 
+                $.each(data, function (key, item) {
+                    alert(formatItem(item));
+                    // Add a list item for the product. 
+                    //$('<li>', { text: formatItem(item) }).appendTo($('#emails'));
+                });
+            });
+    });
+
+    function formatItem(item) {
+        return item.Content;
+    }
+
+//    function find() {
+//        var id = $('#prodId').val();
+//        $.getJSON(apiUrl + '/' + id)
+//            .done(function (data) {
+//                $('#product').text(formatItem(data));
+//            })
+//            .fail(function (jqXHR, textStatus, err) {
+//                $('#product').text('Error: ' + err);
+//            });
+//    } 
+</script> 
+}*@
+
+
 <h2>Index</h2>
 
 <p>
@@ -53,6 +88,9 @@
         </td>
     </tr>
 }
+
+
+
 
 </table>
 

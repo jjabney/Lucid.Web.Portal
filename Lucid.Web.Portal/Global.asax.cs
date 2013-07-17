@@ -6,6 +6,9 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Microsoft.Practices.Unity;
+using Lucid.Web.Portal.Models;
+using Lucid.Web.Portal.Controllers;
 
 namespace Lucid.Web.Portal
 {
@@ -23,5 +26,6 @@ namespace Lucid.Web.Portal
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+
     }
 }
