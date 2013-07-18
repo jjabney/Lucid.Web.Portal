@@ -17,7 +17,7 @@ namespace Lucid.Web.Portal.Models
         // 
         public LucidWebPortalContext()
         {
-            System.Data.Entity.Database.SetInitializer(new System.Data.Entity.DropCreateDatabaseIfModelChanges<LucidWebPortalContext>());
+            System.Data.Entity.Database.SetInitializer(new System.Data.Entity.DropCreateDatabaseAlways<LucidWebPortalContext>());
         }
 
    
@@ -26,5 +26,7 @@ namespace Lucid.Web.Portal.Models
         public DbSet<Lucid.Web.Portal.Models.Patient> Patients { get; set; }
 
         public DbSet<Lucid.Web.Portal.Models.Chiropractor> Chiropractors { get; set; }
+
+        public DbSet<Lucid.Web.Portal.Models.User> Users { get; set; }
     }
 }

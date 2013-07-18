@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lucid.Web.Portal", "Lucid.W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lucid.Web.Portal.Tests", "Lucid.Web.Portal.Tests\Lucid.Web.Portal.Tests.csproj", "{8BB4D71F-32AF-4C31-96D4-60AB1F81D773}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lucid.Common", "Lucid.Common\Lucid.Common.csproj", "{8AEBE732-94D4-49BB-B859-9A736188D8D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{8BB4D71F-32AF-4C31-96D4-60AB1F81D773}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BB4D71F-32AF-4C31-96D4-60AB1F81D773}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BB4D71F-32AF-4C31-96D4-60AB1F81D773}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AEBE732-94D4-49BB-B859-9A736188D8D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AEBE732-94D4-49BB-B859-9A736188D8D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AEBE732-94D4-49BB-B859-9A736188D8D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AEBE732-94D4-49BB-B859-9A736188D8D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

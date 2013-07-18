@@ -77,7 +77,20 @@ namespace Lucid.Web.Portal.Controllers
 
         private void SendEmail(Message message, string subject = "An important message from your chiropractor")
         {
-            
+
+            IUserRepository userRepository = new UserRepository();
+            User user = userRepository.Find(message.To);
+            if (user == null)
+            {
+                user = new User();
+                user.Email = message.To;
+              
+                user.Password = "temp";
+                user.RegistrationDate = DateTime.Now.ToUniversalTime();
+                userRepository.InsertOrUpdate(user);
+                userRepository.Save();
+            }
+
             MailMessage mailMsg = new MailMessage();
             // To
             mailMsg.To.Add(new MailAddress(message.To));
@@ -85,8 +98,8 @@ namespace Lucid.Web.Portal.Controllers
             mailMsg.From = new MailAddress(message.From);
             // Subject and multipart/alternative Body
             mailMsg.Subject = subject;
-            string text = "Please click on the following link to view the message \n\n http://lucidsolutions.azurewebsites.net/messages";
-            string html = @"<p><a href='http://lucidsolutions.azurewebsites.net/messages'>Please click here to view the message</a>";
+            string text = "Please click on the following link to view the message \n\n http://lucidsolutions.azurewebsites.net/home/login?sp=123";
+            string html = @"<p><a href='http://lucidsolutions.azurewebsites.net/users/register/u= >Please click here to view the message</a>";
             mailMsg.AlternateViews.Add(AlternateView.CreateAlternateViewFromString(text, null, MediaTypeNames.Text.Plain));
             mailMsg.AlternateViews.Add(AlternateView.CreateAlternateViewFromString(html, null, MediaTypeNames.Text.Html));
             // Init SmtpClient and send
