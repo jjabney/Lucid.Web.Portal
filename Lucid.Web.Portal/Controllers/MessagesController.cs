@@ -97,7 +97,7 @@ namespace Lucid.Web.Portal.Controllers
             if (String.IsNullOrEmpty(userName))
             {
 
-                link = string.Format("{0}account/activate/{1}", GetBaseUrl(),Cryptography.Encrypt("Patient:" + message.To));
+                link = string.Format("{0}account/activate?u={1}&r={2}", GetBaseUrl(),Security.DES_encrypt(message.To),Security.DES_encrypt("Patient"));
             
             }
    

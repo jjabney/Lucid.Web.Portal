@@ -25,6 +25,7 @@ namespace Lucid.Common
         public const int SALT_INDEX = 1;
         public const int PBKDF2_INDEX = 2;
 
+        private const string sEncryptionKey = "BC05so2Inf#";
         /// <summary>
         /// Creates a salted PBKDF2 hash of the password.
         /// </summary>
@@ -100,7 +101,7 @@ namespace Lucid.Common
         /// <param name="stringToEncrypt">String to be encrypted</param>
         /// <param name="sEncryptionKey">Public key</param>
         /// <returns>string</returns>
-        public static string DES_encrypt(string stringToEncrypt, string sEncryptionKey)
+        public static string DES_encrypt(string stringToEncrypt)
         {
             if (stringToEncrypt.Length <= 3) { throw new Exception("Invalid input string"); }
 
@@ -129,7 +130,7 @@ namespace Lucid.Common
         /// <param name="stringToDecrypt">String to be decrypted</param>
         /// <param name="sEncryptionKey">Public key</param>
         /// <returns>string</returns>
-        public static string DES_decrypt(string stringToDecrypt, string sEncryptionKey)
+        public static string DES_decrypt(string stringToDecrypt)
         {
             if (stringToDecrypt.Length <= 3) { throw new Exception("Invalid input string"); }
 
@@ -154,51 +155,6 @@ namespace Lucid.Common
         }
     }
 
-    public class EncryptDecryptQueryString
-    {
-        private byte[] key = { };
-        private byte[] IV = { 0x12, 0x34, 0x56, 0x78, 0x90, 0xab, 0xcd, 0xef };
-        public string Decrypt(string stringToDecrypt, string sEncryptionKey)
-        {
-            byte[] inputByteArray = new byte[stringToDecrypt.Length + 1];
-            try
-            {
-                key = System.Text.Encoding.UTF8.GetBytes(sEncryptionKey);
-                DESCryptoServiceProvider des = new DESCryptoServiceProvider();
-                inputByteArray = Convert.FromBase64String(stringToDecrypt);
-                MemoryStream ms = new MemoryStream();
-                CryptoStream cs = new CryptoStream(ms,
-                  des.CreateDecryptor(key, IV), CryptoStreamMode.Write);
-                cs.Write(inputByteArray, 0, inputByteArray.Length);
-                cs.FlushFinalBlock();
-                System.Text.Encoding encoding = System.Text.Encoding.UTF8;
-                return encoding.GetString(ms.ToArray());
-            }
-            catch (Exception e)
-            {
-                return e.Message;
-            }
-        }
-
-        public string Encrypt(string stringToEncrypt, string SEncryptionKey)
-        {
-            try
-            {
-                key = System.Text.Encoding.UTF8.GetBytes(SEncryptionKey);
-                DESCryptoServiceProvider des = new DESCryptoServiceProvider();
-                byte[] inputByteArray = Encoding.UTF8.GetBytes(stringToEncrypt);
-                MemoryStream ms = new MemoryStream();
-                CryptoStream cs = new CryptoStream(ms,
-                  des.CreateEncryptor(key, IV), CryptoStreamMode.Write);
-                cs.Write(inputByteArray, 0, inputByteArray.Length);
-                cs.FlushFinalBlock();
-                return Convert.ToBase64String(ms.ToArray());
-            }
-            catch (Exception e)
-            {
-                return e.Message;
-            }
-        }
-    }
+  
     
 }
