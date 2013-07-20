@@ -8,9 +8,14 @@ using System.Diagnostics;
 using System.Net.Mail;
 using SendGrid;
 using System.Net.Mime;
+using System.Web.Security;
+using Lucid.Common;
+using System.Runtime.Serialization.Json;
+using System.IO;
 
 namespace Lucid.Web.Portal.Controllers
-{   
+{
+     [Authorize]
     public class MessagesController : Controller
     {
 		private readonly IMessageRepository messageRepository;
@@ -27,15 +32,16 @@ namespace Lucid.Web.Portal.Controllers
 
         //
         // GET: /Messages/
-
+        [Authorize(Roles="Chiropractor,Patient")]
         public ViewResult Index()
         {
-            return View(messageRepository.All);
+           MembershipUser ms = Membership.GetUser(User.Identity.Name);
+           return View(messageRepository.All.Where(x => x.To == ms.Email));
         }
 
         //
         // GET: /Messages/Details/5
-
+        [Authorize(Roles = "Chiropractor,Patient")]
         public ViewResult Details(int id)
         {
             var message = messageRepository.Find(id);
@@ -50,47 +56,50 @@ namespace Lucid.Web.Portal.Controllers
 
         //
         // GET: /Messages/Create
-
+        [Authorize(Roles = "Chiropractor,Patient")]
         public ActionResult Create()
         {
-            return View();
+            Message message = new Message();
+            message.From = Membership.GetUser().Email;
+          
+            return View(message);
         } 
 
         //
         // POST: /Messages/Create
 
         [HttpPost]
+        [Authorize(Roles = "Chiropractor,Patient")]
         public ActionResult Create(Message message)
         {
+         
             if (ModelState.IsValid) {
                 messageRepository.InsertOrUpdate(message);
                 messageRepository.Save();
-                NotifyRecipient(message);
+    
 
                 SendEmail(message);
 
                 return RedirectToAction("Index");
             } else {
-				return View();
+				return View(message);
 			}
         }
 
-        private void SendEmail(Message message, string subject = "An important message from your chiropractor")
+        private void SendEmail(Message message)
         {
+            string link = string.Format("{0}{1}", GetBaseUrl(), "messages");
+            
+            string subject = "An important message";
 
-            IUserRepository userRepository = new UserRepository();
-            User user = userRepository.Find(message.To);
-            if (user == null)
+            string userName = Membership.GetUserNameByEmail(message.To);
+
+            if (String.IsNullOrEmpty(userName))
             {
-                user = new User();
-                user.Email = message.To;
-              
-                user.Password = "temp";
-                user.RegistrationDate = DateTime.Now.ToUniversalTime();
-                userRepository.InsertOrUpdate(user);
-                userRepository.Save();
-            }
 
+                link = string.Format("{0}{1}",GetBaseUrl(),"account/activate/" + Security.DES_encrypt("Patient:" + message.To, "BC05so2Inf#"));
+            }
+   
             MailMessage mailMsg = new MailMessage();
             // To
             mailMsg.To.Add(new MailAddress(message.To));
@@ -98,8 +107,8 @@ namespace Lucid.Web.Portal.Controllers
             mailMsg.From = new MailAddress(message.From);
             // Subject and multipart/alternative Body
             mailMsg.Subject = subject;
-            string text = "Please click on the following link to view the message \n\n http://lucidsolutions.azurewebsites.net/home/login?sp=123";
-            string html = @"<p><a href='http://lucidsolutions.azurewebsites.net/users/register/u= >Please click here to view the message</a>";
+            string text = "Please click on the following link to view the message \n\n" + link;
+            string html = @"<p><a href='" + link + "'>Please click here to view the message</a>";
             mailMsg.AlternateViews.Add(AlternateView.CreateAlternateViewFromString(text, null, MediaTypeNames.Text.Plain));
             mailMsg.AlternateViews.Add(AlternateView.CreateAlternateViewFromString(html, null, MediaTypeNames.Text.Html));
             // Init SmtpClient and send
@@ -107,28 +116,34 @@ namespace Lucid.Web.Portal.Controllers
             smtpClient.Send(mailMsg);
         }
 
-        private void NotifyRecipient(Message message)
-        {
-            Debug.WriteLine(message.ToString());
-        }
         
         //
         // GET: /Messages/Edit/5
- 
-        public ActionResult Edit(int id)
+        [Authorize(Roles = "Chiropractor,Patient")]
+        public ActionResult Reply(int id)
         {
-             return View(messageRepository.Find(id));
+             Message message = messageRepository.Find(id);
+             return View(message);
         }
 
         //
         // POST: /Messages/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(Message message)
+        [Authorize(Roles = "Chiropractor,Patient")]
+        public ActionResult Reply(Message message)
         {
-            if (ModelState.IsValid) {
-                messageRepository.InsertOrUpdate(message);
+            if (ModelState.IsValid) 
+            {
+
+                Message replyMessage = new Message();
+                replyMessage.To = message.From;
+                replyMessage.From = message.To;
+                replyMessage.Content = message.Content;
+
+                messageRepository.InsertOrUpdate(replyMessage);
                 messageRepository.Save();
+                SendEmail(replyMessage);
                 return RedirectToAction("Index");
             } else {
 				return View();
@@ -137,7 +152,7 @@ namespace Lucid.Web.Portal.Controllers
 
         //
         // GET: /Messages/Delete/5
- 
+        [Authorize(Roles = "Chiropractor,Patient")]
         public ActionResult Delete(int id)
         {
             return View(messageRepository.Find(id));
@@ -147,6 +162,7 @@ namespace Lucid.Web.Portal.Controllers
         // POST: /Messages/Delete/5
 
         [HttpPost, ActionName("Delete")]
+        [Authorize(Roles = "Chiropractor,Patient")]
         public ActionResult DeleteConfirmed(int id)
         {
             messageRepository.Delete(id);
@@ -162,6 +178,15 @@ namespace Lucid.Web.Portal.Controllers
             }
             base.Dispose(disposing);
         }
+
+         public string GetBaseUrl()
+        {
+    var request = HttpContext.Request;
+    var appUrl = HttpRuntime.AppDomainAppVirtualPath;
+    var baseUrl = string.Format("{0}://{1}{2}", request.Url.Scheme, request.Url.Authority, appUrl);
+
+    return baseUrl;
+    }
     }
 }
 

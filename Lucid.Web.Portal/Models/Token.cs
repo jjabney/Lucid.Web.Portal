@@ -6,18 +6,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Lucid.Web.Portal.Models
 {
-    public class User
+    public class MessageToken
     {
         [Key]
         public int Id { get; set; }
 
-        [Required]
-        public string Password { get; set; }
-       
-        public DateTime RegistrationDate { get; set; }
-       
-        [Required]
-        public string Email { get; set; }
+        public string Key { get; set; }
 
+        public string Value { get; set; }
     }
 }

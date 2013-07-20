@@ -1,90 +1,46 @@
 @model IEnumerable<Lucid.Web.Portal.Models.Message>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Inbox";
 }
 
-@*@section scripts { 
-<script>
-    var apiUrl = 'api/emails';
-
-    $(document).ready(function () {
-        // Send an AJAX request 
-        $.getJSON(apiUrl)
-            .done(function (data) {
-                // On success, 'data' contains a list of products. 
-                $.each(data, function (key, item) {
-                    alert(formatItem(item));
-                    // Add a list item for the product. 
-                    //$('<li>', { text: formatItem(item) }).appendTo($('#emails'));
-                });
-            });
-    });
-
-    function formatItem(item) {
-        return item.Content;
-    }
-
-//    function find() {
-//        var id = $('#prodId').val();
-//        $.getJSON(apiUrl + '/' + id)
-//            .done(function (data) {
-//                $('#product').text(formatItem(data));
-//            })
-//            .fail(function (jqXHR, textStatus, err) {
-//                $('#product').text('Error: ' + err);
-//            });
-//    } 
-</script> 
-}*@
-
-
-<h2>Index</h2>
+<h2>Inbox</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Compose", "Create")
 </p>
 <table>
     <tr>
-        <th></th>
-        <th>
-            Content
-        </th>
         <th>
             From
         </th>
         <th>
-            To
+            Content
         </th>
         <th>
-            Created
+            Date
         </th>
-        <th>
-            IsRead
-        </th>
+        <th></th>
+         
     </tr>
 
 @foreach (var item in Model) {
     <tr>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-        <td>
-			@item.Content
-        </td>
+ 
+     
         <td>
 			@item.From
         </td>
-        <td>
-			@item.To
+           <td>
+			@item.Content
         </td>
-        <td>
+         <td>
 			@String.Format("{0:g}", item.Created)
         </td>
-        <td>
-			@item.IsRead
+              <td>
+            @Html.ActionLink("Reply", "Reply", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
         </td>
     </tr>
 }

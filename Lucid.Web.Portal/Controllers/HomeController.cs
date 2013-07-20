@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Lucid.Web.Portal.Models;
+using Lucid.Common;
 
 namespace Lucid.Web.Portal.Controllers
 {
@@ -23,5 +24,7 @@ namespace Lucid.Web.Portal.Controllers
             }
             return View("Login");
         }
+
+       
     }
 }

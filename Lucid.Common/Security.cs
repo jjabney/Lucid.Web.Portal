@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Security.Cryptography;
+using System.IO;
 
 namespace Lucid.Common
 {
@@ -12,8 +13,9 @@ namespace Lucid.Common
     /// www: http://crackstation.net/hashing-security.htm
     /// Compatibility: .NET 3.0 and later.
     /// </summary>
-    public class PasswordHash
+    public class Security
     {
+
         // The following constants may be changed without breaking existing hashes.
         public const int SALT_BYTE_SIZE = 24;
         public const int HASH_BYTE_SIZE = 24;
@@ -91,5 +93,65 @@ namespace Lucid.Common
             pbkdf2.IterationCount = iterations;
             return pbkdf2.GetBytes(outputBytes);
         }
+
+        ///<summary>
+        /// Encrypts an string using provided public key (DES)
+        /// </summary>
+        /// <param name="stringToEncrypt">String to be encrypted</param>
+        /// <param name="sEncryptionKey">Public key</param>
+        /// <returns>string</returns>
+        public static string DES_encrypt(string stringToEncrypt, string sEncryptionKey)
+        {
+            if (stringToEncrypt.Length <= 3) { throw new Exception("Invalid input string"); }
+
+            byte[] key = { };
+            byte[] IV = { 10, 20, 30, 40, 50, 60, 70, 80 }; //defining vectors
+            byte[] inputByteArray;
+            key = Encoding.UTF8.GetBytes(sEncryptionKey.Substring(0, 8));
+            using (var des = new DESCryptoServiceProvider())
+            {
+                inputByteArray = Encoding.UTF8.GetBytes(stringToEncrypt);
+                using (var ms = new MemoryStream())
+                {
+                    using (var cs = new CryptoStream(ms, des.CreateEncryptor(key, IV), CryptoStreamMode.Write))
+                    {
+                        cs.Write(inputByteArray, 0, inputByteArray.Length);
+                        cs.FlushFinalBlock();
+                        return Convert.ToBase64String(ms.ToArray());
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Decrypts an string using provided public key (DES)
+        /// </summary>
+        /// <param name="stringToDecrypt">String to be decrypted</param>
+        /// <param name="sEncryptionKey">Public key</param>
+        /// <returns>string</returns>
+        public static string DES_decrypt(string stringToDecrypt, string sEncryptionKey)
+        {
+            if (stringToDecrypt.Length <= 3) { throw new Exception("Invalid input string"); }
+
+            byte[] key = { };
+            byte[] IV = { 10, 20, 30, 40, 50, 60, 70, 80 };//defining vectors
+            byte[] inputByteArray = new byte[stringToDecrypt.Length];
+            key = Encoding.UTF8.GetBytes(sEncryptionKey.Substring(0, 8));
+            using (var des = new DESCryptoServiceProvider())
+            {
+                inputByteArray = Convert.FromBase64String(stringToDecrypt.Replace(" ", "+"));
+                using (var ms = new MemoryStream())
+                {
+                    using (CryptoStream cs = new CryptoStream(ms, des.CreateDecryptor(key, IV), CryptoStreamMode.Write))
+                    {
+                        cs.Write(inputByteArray, 0, inputByteArray.Length);
+                        cs.FlushFinalBlock();
+                        var encoding = Encoding.UTF8;
+                        return encoding.GetString(ms.ToArray());
+                    }
+                }
+            }
+        }
     }
+    
 }

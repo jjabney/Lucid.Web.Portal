@@ -1,0 +1,29 @@
+﻿@model Lucid.Web.Portal.Models.ForgotCredentialsModel
+
+@{
+    ViewBag.Title = "Reset";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Reset</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary()
+
+    <ul >
+
+        <li >
+            @Html.LabelFor(m => m.Email)
+            @Html.PasswordFor(m => m.Email)            
+        </li>
+
+
+        <li >
+            <input type="submit" value="E-Mail my credentials" />
+        </li>
+    </ul>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

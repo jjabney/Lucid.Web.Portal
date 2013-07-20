@@ -35,5 +35,7 @@ namespace Lucid.Web.Portal.Controllers
         public void Delete(int id)
         {
         }
+
+   
     }
 }
