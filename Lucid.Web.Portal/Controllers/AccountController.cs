@@ -82,19 +82,18 @@ namespace Lucid.Web.Portal.Controllers
         }
 
         [AllowAnonymous]
-        public ActionResult Activate(string id)
+        public ActionResult Activate()
         {
-            //string data = Security.DES_decrypt(id, "BC05so2Inf#");
+            if (Request.QueryString["u"] != null && Request.QueryString["r"] != null)
+            {
+                RegisterModel model = new RegisterModel();
+                model.UserName  = Security.DES_decrypt(Request.QueryString["u"]);
+                model.Email = model.UserName;
+                model.AccessCode = Security.DES_decrypt(Request.QueryString["r"]);
+                return View(model);
+             }
 
-           
-
-            //RegisterModel model = new RegisterModel();
-            //var roleAndEmail = data.Split(':');
-            //model.UserName = roleAndEmail[1];
-            //model.Email = roleAndEmail[1];
-            //model.AccessCode = roleAndEmail[0];
-
-            return View();
+            return RedirectToAction("Register");
         }
 
         //
@@ -106,6 +105,12 @@ namespace Lucid.Web.Portal.Controllers
         {
             if (ModelState.IsValid)
             {
+               if(!String.IsNullOrEmpty( Membership.GetUserNameByEmail(model.Email)))
+               {
+                   ModelState.AddModelError("UAE","E-Mail address already exists");
+                   return View("activate",model);
+               }
+
                 // Attempt to register the user
                 MembershipCreateStatus createStatus;
                 Membership.CreateUser(model.UserName, model.Password, model.Email, passwordQuestion: null, passwordAnswer: null, isApproved: true, providerUserKey: null, status: out createStatus);

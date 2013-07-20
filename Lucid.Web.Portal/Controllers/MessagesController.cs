@@ -88,30 +88,47 @@ namespace Lucid.Web.Portal.Controllers
 
         private void SendEmail(Message message)
         {
-            string link = string.Format("{0}{1}", GetBaseUrl(), "messages");
-            
-            string subject = "An important message";
-
+            string subject = "";
+            string textContent = "";
+            string htmlContent = "";
+            string link = "";
             string userName = Membership.GetUserNameByEmail(message.To);
-
             if (String.IsNullOrEmpty(userName))
             {
-
-                link = string.Format("{0}account/activate?u={1}&r={2}", GetBaseUrl(),Security.DES_encrypt(message.To),Security.DES_encrypt("Patient"));
-            
+                string.Format("{0}account/activate?u={1}&r={2}", GetBaseUrl(), Security.DES_encrypt(message.To), Security.DES_encrypt("Patient"));
+                subject = "An important message from your chiropractor";
+                textContent = "";
+                htmlContent = "";
             }
-   
+            else
+            {
+                link = string.Format("{0}{1}", GetBaseUrl(), "messages");
+                string[] roles = Roles.GetRolesForUser(userName);
+                if (roles.Length > 0 && roles[0].Equals("Patient"))
+                {
+                    subject = "An important message from your chiropractor";
+                    textContent = "Your chiropractor has sent you an important message.  \n\n Please click on the following link to view the message \n\n" + link;
+                    htmlContent ="<p>Your chiropractor has sent you an important message.</p><p><a href='" + link + "'>Please click here to view the message</a>";
+
+                }
+                else
+                {
+                    subject = "An important message from your patient";
+                    textContent = "Your patient has sent you an important message.  \n\n Please click on the following link to view the message \n\n" + link;
+                    htmlContent ="<p>Your patient has sent you an important message.</p><p><a href='" + link + "'>Please click here to view the message</a>";
+
+                }
+            }
             MailMessage mailMsg = new MailMessage();
             // To
             mailMsg.To.Add(new MailAddress(message.To));
             // From
-            mailMsg.From = new MailAddress(message.From);
+            mailMsg.From = new MailAddress("donotreply@lucidclinicalsolutions.com");
             // Subject and multipart/alternative Body
             mailMsg.Subject = subject;
-            string text = "Please click on the following link to view the message \n\n" + link;
-            string html = @"<p><a href='" + link + "'>Please click here to view the message</a>";
-            mailMsg.AlternateViews.Add(AlternateView.CreateAlternateViewFromString(text, null, MediaTypeNames.Text.Plain));
-            mailMsg.AlternateViews.Add(AlternateView.CreateAlternateViewFromString(html, null, MediaTypeNames.Text.Html));
+           
+            mailMsg.AlternateViews.Add(AlternateView.CreateAlternateViewFromString(textContent, null, MediaTypeNames.Text.Plain));
+            mailMsg.AlternateViews.Add(AlternateView.CreateAlternateViewFromString(htmlContent, null, MediaTypeNames.Text.Html));
             // Init SmtpClient and send
             SmtpClient smtpClient = new SmtpClient();
             smtpClient.Send(mailMsg);

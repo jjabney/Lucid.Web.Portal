@@ -1,0 +1,19 @@
+﻿@{ Layout = "~/Views/Shared/_site.cshtml"; }
+<div id="public">
+   <section class="featured">
+  <header>
+    <div class="content-wrapper">
+        <div class="float-left">
+            <p class="site-title">
+                <a href="~/">Lucid Solutions</a></p>
+        </div>
+    </div>
+</header>
+</section>
+  @RenderBody()
+  <p>public footer</p>
+</div>
+@section scripts {
+  <script type="text/javascript" src="/scripts/public.js"></script>
+  @RenderSection("scripts", required: false)
+}
