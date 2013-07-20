@@ -82,20 +82,19 @@ namespace Lucid.Web.Portal.Controllers
         }
 
         [AllowAnonymous]
-        [HttpGet]
         public ActionResult Activate(string id)
         {
-            string data = Security.DES_decrypt(id, "BC05so2Inf#");
+            //string data = Security.DES_decrypt(id, "BC05so2Inf#");
 
            
 
-            RegisterModel model = new RegisterModel();
-            var roleAndEmail = data.Split(':');
-            model.UserName = roleAndEmail[1];
-            model.Email = roleAndEmail[1];
-            model.AccessCode = roleAndEmail[0];
+            //RegisterModel model = new RegisterModel();
+            //var roleAndEmail = data.Split(':');
+            //model.UserName = roleAndEmail[1];
+            //model.Email = roleAndEmail[1];
+            //model.AccessCode = roleAndEmail[0];
 
-            return View(model);
+            return View();
         }
 
         //

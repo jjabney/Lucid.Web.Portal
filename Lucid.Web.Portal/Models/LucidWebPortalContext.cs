@@ -17,8 +17,17 @@ namespace Lucid.Web.Portal.Models
         // 
         public LucidWebPortalContext()
         {
-            System.Data.Entity.Database.SetInitializer(new System.Data.Entity.CreateDatabaseIfNotExists<LucidWebPortalContext>());
+            try
+            {
+                System.Data.Entity.Database.SetInitializer(new System.Data.Entity.CreateDatabaseIfNotExists<LucidWebPortalContext>());
+
+            }
+            catch (Exception ex)
+            {
+                var e = ex;
+            }
         }
+
 
    
         public DbSet<Lucid.Web.Portal.Models.Message> Messages { get; set; }
