@@ -95,10 +95,11 @@ namespace Lucid.Web.Portal.Controllers
             string userName = Membership.GetUserNameByEmail(message.To);
             if (String.IsNullOrEmpty(userName))
             {
-                string.Format("{0}account/activate?u={1}&r={2}", GetBaseUrl(), Security.DES_encrypt(message.To), Security.DES_encrypt("Patient"));
+                link = string.Format("{0}account/activate?u={1}&r={2}", GetBaseUrl(), Security.DES_encrypt(message.To), Security.DES_encrypt("Patient"));
                 subject = "An important message from your chiropractor";
-                textContent = "";
-                htmlContent = "";
+                textContent = "Your chiropractor has sent you an important message.  \n\n Please click on the following link to view the message \n\n" + link;
+                htmlContent = "<p>Your chiropractor has sent you an important message.</p><p><a href='" + link + "'>Please click here to view the message</a>";
+
             }
             else
             {

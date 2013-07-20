@@ -128,7 +128,7 @@ namespace Lucid.Web.Portal.Controllers
                 if (createStatus == MembershipCreateStatus.Success)
                 {
                     FormsAuthentication.SetAuthCookie(model.UserName, createPersistentCookie: false);
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Messages");
                 }
                 else
                 {
