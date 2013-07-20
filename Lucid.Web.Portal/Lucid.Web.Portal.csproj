@@ -152,7 +152,6 @@
     <Compile Include="Models\LucidWebPortalContext.cs" />
     <Compile Include="Models\Message.cs" />
     <Compile Include="Models\MessageRepository.cs" />
-    <Compile Include="Models\Token.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
