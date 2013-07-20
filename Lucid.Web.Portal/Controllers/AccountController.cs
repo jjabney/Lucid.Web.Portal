@@ -135,13 +135,7 @@ namespace Lucid.Web.Portal.Controllers
             return View(model);
         }
 
-        [AllowAnonymous]
-        public ActionResult Activate(RegisterModel model)
-        {
-
-
-            return View();
-        }
+      
 
        
 
