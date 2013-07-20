@@ -88,7 +88,7 @@ namespace Lucid.Web.Portal.Controllers
 
         private void SendEmail(Message message)
         {
-            string link = string.Format("{0}{1}", GetBaseUrl(), "messages");
+            string link = Url.Encode( string.Format("{0}{1}", GetBaseUrl(), "messages"));
             
             string subject = "An important message";
 
@@ -97,7 +97,8 @@ namespace Lucid.Web.Portal.Controllers
             if (String.IsNullOrEmpty(userName))
             {
 
-                link = string.Format("{0}{1}",GetBaseUrl(),"account/activate/" + Security.DES_encrypt("Patient:" + message.To, "BC05so2Inf#"));
+                link = Url.Encode( string.Format("{0}{1}",GetBaseUrl(),"account/activate/" + Security.DES_encrypt("Patient:" + message.To, "BC05so2Inf#")));
+            
             }
    
             MailMessage mailMsg = new MailMessage();
