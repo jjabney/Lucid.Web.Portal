@@ -31,6 +31,13 @@ namespace Lucid.Web.Portal.Controllers
             return View();
         }
 
+        [Authorize(Roles="Patient,Chiropractor,Admin")]
+        public ActionResult SignOut()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Index", "Home");
+        }
+
         //
         // POST: /Account/Login
 
@@ -165,6 +172,7 @@ namespace Lucid.Web.Portal.Controllers
                 }
 
                 MembershipUser user = Membership.GetUser(userName);
+               
 
 
                 

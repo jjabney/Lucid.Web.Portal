@@ -10,20 +10,20 @@
 @using (Html.BeginForm()) {
     @Html.ValidationSummary()
 
-    <ul >
+    <ul  style="list-style-type:none">
 
         <li >
             @Html.LabelFor(m => m.Email)
-            @Html.PasswordFor(m => m.Email)            
+                
         </li>
 
-
+        <li>
+              @Html.PasswordFor(m => m.Email)      
+        </li>
+        <li></li>
         <li >
             <input type="submit" value="E-Mail my credentials" />
         </li>
     </ul>
 }
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}

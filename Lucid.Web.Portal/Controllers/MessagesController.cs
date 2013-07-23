@@ -59,10 +59,11 @@ namespace Lucid.Web.Portal.Controllers
         [Authorize(Roles = "Chiropractor,Patient")]
         public ActionResult Create()
         {
-            Message message = new Message();
-            message.From = Membership.GetUser().Email;
+            IVideoRepository repo = new VideoRepository();
+            var viewModel = new ComposeEmailViewModel(repo.All.ToList());
+           viewModel.Message.From = Membership.GetUser().Email;
           
-            return View(message);
+            return View(viewModel);
         } 
 
         //
@@ -70,20 +71,22 @@ namespace Lucid.Web.Portal.Controllers
 
         [HttpPost]
         [Authorize(Roles = "Chiropractor,Patient")]
-        public ActionResult Create(Message message)
+        public ActionResult Create(FormCollection data)
         {
-         
-            if (ModelState.IsValid) {
-                messageRepository.InsertOrUpdate(message);
-                messageRepository.Save();
+            var selected = data["Selected"];
+            var d = data;
+            //if (ModelState.IsValid) {
+            //    messageRepository.InsertOrUpdate(viewModel.Message);
+            //    messageRepository.Save();
     
 
-                SendEmail(message);
+            //    SendEmail(viewModel.Message);
 
-                return RedirectToAction("Index");
-            } else {
-				return View(message);
-			}
+            //    return RedirectToAction("Index");
+            //} else {
+            //    return View(viewModel);
+            //}
+            return View();
         }
 
         private void SendEmail(Message message)
@@ -100,6 +103,7 @@ namespace Lucid.Web.Portal.Controllers
                 textContent = "Your chiropractor has sent you an important message.  \n\n Please click on the following link to view the message \n\n" + link;
                 htmlContent = "<p>Your chiropractor has sent you an important message.</p><p><a href='" + link + "'>Please click here to view the message</a>";
 
+              
             }
             else
             {

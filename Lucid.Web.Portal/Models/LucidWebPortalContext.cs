@@ -17,22 +17,18 @@ namespace Lucid.Web.Portal.Models
         // 
         public LucidWebPortalContext()
         {
-            try
-            {
-                System.Data.Entity.Database.SetInitializer(new System.Data.Entity.CreateDatabaseIfNotExists<LucidWebPortalContext>());
+        
+                System.Data.Entity.Database.SetInitializer(new LucidWebPortalContextInitializer());
 
-            }
-            catch (Exception ex)
-            {
-                var e = ex;
-            }
+                
+              
         }
 
-
+    
    
         public DbSet<Lucid.Web.Portal.Models.Message> Messages { get; set; }
 
-     
+        public DbSet<Lucid.Web.Portal.Models.Video> Videos { get; set; }
 
     }
 }

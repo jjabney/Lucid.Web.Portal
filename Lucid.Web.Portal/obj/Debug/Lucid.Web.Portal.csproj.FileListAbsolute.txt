@@ -82,3 +82,5 @@ C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\Lucid.Web.Portal\bin\SendGridP
 C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\Lucid.Web.Portal\bin\CodeScales.Http.dll
 C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\Lucid.Web.Portal\bin\SendGridPlus.pdb
 C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\Lucid.Web.Portal\bin\SendGridPlus.xml
+C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\Lucid.Web.Portal\bin\Lucid.Common.dll
+C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\Lucid.Web.Portal\bin\Lucid.Common.pdb

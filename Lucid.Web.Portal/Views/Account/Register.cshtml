@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <p>
@@ -11,41 +12,62 @@
 @using (Html.BeginForm()) {
     @Html.ValidationSummary()
 
-    <ul data-role="listview" data-inset="true">
-        <li data-role="list-divider">Details</li>
+    <ul  style="list-style-type:none;">
+     
 
-        <li data-role="fieldcontain">
+        <li >
             @Html.LabelFor(m => m.UserName)
+       
+        </li>
+
+        <li >
             @Html.TextBoxFor(m => m.UserName)            
         </li>
 
-        <li data-role="fieldcontain">
+        <li >
             @Html.LabelFor(m => m.Email)
+                    
+        </li>
+
+
+        <li>
+             @Html.TextBoxFor(m => m.Email)   
+        </li>
+        
+        <li >
+            @Html.LabelFor(m => m.AccessCode)
+          
+        </li>
+
+            <li >
+   
             @Html.TextBoxFor(m => m.Email)            
         </li>
 
-        
-        <li data-role="fieldcontain">
-            @Html.LabelFor(m => m.AccessCode)
-            @Html.TextBoxFor(m => m.AccessCode)            
+        <li >
+            @Html.LabelFor(m => m.Password)
+            
         </li>
 
-        <li data-role="fieldcontain">
-            @Html.LabelFor(m => m.Password)
+        <li >
+     
             @Html.PasswordFor(m => m.Password)            
         </li>
 
-        <li data-role="fieldcontain">
+
+        <li >
             @Html.LabelFor(m => m.ConfirmPassword)
+                
+        </li>
+
+                <li >
+  
             @Html.PasswordFor(m => m.ConfirmPassword)            
         </li>
 
-        <li data-role="fieldcontain">
+
+        <li >
             <input type="submit" value="Register" />
         </li>
     </ul>
-}
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
 }

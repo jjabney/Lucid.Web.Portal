@@ -86,3 +86,5 @@ C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\Lucid.Web.Portal.Tests\bin\Deb
 C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\Lucid.Web.Portal.Tests\bin\Debug\CodeScales.Http.dll
 C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\Lucid.Web.Portal.Tests\bin\Debug\SendGridPlus.pdb
 C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\Lucid.Web.Portal.Tests\bin\Debug\SendGridPlus.xml
+C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\Lucid.Web.Portal.Tests\bin\Debug\Lucid.Common.dll
+C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\Lucid.Web.Portal.Tests\bin\Debug\Lucid.Common.pdb

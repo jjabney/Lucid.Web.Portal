@@ -9,7 +9,8 @@ namespace Lucid.Web.Portal.Controllers
 {
     public class ValuesController : ApiController
     {
-        // GET api/values
+        // GET api/valuesu
+        [Authorize(Roles = "Chiropractor,Patient")]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };

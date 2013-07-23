@@ -1,0 +1,4 @@
+C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\Lucid.Common\bin\Debug\Lucid.Common.dll
+C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\Lucid.Common\bin\Debug\Lucid.Common.pdb
+C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\Lucid.Common\obj\Debug\Lucid.Common.dll
+C:\Users\jabney\Documents\GitHub\Lucid.Web.Portal\Lucid.Common\obj\Debug\Lucid.Common.pdb
