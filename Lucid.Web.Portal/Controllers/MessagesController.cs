@@ -59,11 +59,10 @@ namespace Lucid.Web.Portal.Controllers
         [Authorize(Roles = "Chiropractor,Patient")]
         public ActionResult Create()
         {
-            IVideoRepository repo = new VideoRepository();
-            var viewModel = new ComposeEmailViewModel(repo.All.ToList());
-           viewModel.Message.From = Membership.GetUser().Email;
+            var model = new Message();
+           model.From = Membership.GetUser().Email;
           
-            return View(viewModel);
+            return View(model);
         } 
 
         //
@@ -71,22 +70,24 @@ namespace Lucid.Web.Portal.Controllers
 
         [HttpPost]
         [Authorize(Roles = "Chiropractor,Patient")]
-        public ActionResult Create(FormCollection data)
+        public ActionResult Create(Message model)
         {
-            var selected = data["Selected"];
-            var d = data;
-            //if (ModelState.IsValid) {
-            //    messageRepository.InsertOrUpdate(viewModel.Message);
-            //    messageRepository.Save();
-    
 
-            //    SendEmail(viewModel.Message);
+            if (ModelState.IsValid)
+            {
+                messageRepository.InsertOrUpdate(model);
+                messageRepository.Save();
 
-            //    return RedirectToAction("Index");
-            //} else {
-            //    return View(viewModel);
-            //}
-            return View();
+
+                SendEmail(model);
+
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View(model);
+            }
+           
         }
 
         private void SendEmail(Message message)

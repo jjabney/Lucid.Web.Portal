@@ -9,31 +9,121 @@
     ViewBag.Title = "Videos";
 }
 
-
-<table>
-    <tr>
-
-      
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
- 
-        <td>
-        <video width="320" height="240" controls>
-  <source src=@item.MobileUrl type="video/mp4">
-
-Your browser does not support the video tag.
-</video>
-<br />
-<input type="checkbox" />@item.Title
-       
-        </td>  
-      
-    </tr>
-}
-
-
-
-
-</table>
+    <!-- START CONTENT -->
+    <div>
+    
+    </div>
+                <div id="content" class="layout-sidebar-no group">
+                
+                    <!-- SLOGAN --> 
+                    <div id="slogan" class="inner">
+                        <h1 class="only">Treatments</h1>
+                    </div>         
+                    <!-- END SLOGAN --> 
+                
+                    <!-- START PRIMARY -->
+                    <div id="primary" class="hentry group wrapper-content" role="main">
+                    
+                        <!-- PORTFOLIO -->
+                        <ul id="portfolio">
+                        
+                            <!-- WORK -->
+                            <li class="hentry first">
+                                <a class="thumb img" href="images/portfolio/three-columns/001.jpg" rel="prettyPhoto[movies]">
+                                    <img src="http://cdn.iplayerhd.com/data/2/2bba66b2.jpg" alt="" />
+                                </a>
+                                <h5><a href="#">Asthma</a></h5>         
+                                <p>Sed ut perspiciatis <strong>unde omnis</strong> iste natus error sit 
+                                voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque 
+                                ipsa quae ab illo inventore veritatis et</p>
+                                
+                                <a class="read-more" href="#">Watch Video</a>
+                            </li>     
+                            <!-- END WORK -->
+                                   
+                            <!-- WORK -->
+                            <li class="hentry">
+                                <a class="thumb img" href="images/portfolio/three-columns/002.jpg" rel="prettyPhoto[movies]">
+                                    <img src="http://cdn.iplayerhd.com/data/4/0c1d1cd4.jpg" alt="" />
+                                </a>
+                                <h5><a href="#">Adjustments</a></h5>
+                    
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
+                                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis</p>
+                    
+                                <a class="read-more" href="#">Watch Video</a>
+                            </li>
+                            <!-- END WORK -->
+                                   
+                            <!-- WORK -->
+                            <li class="hentry last group">
+                                <a class="thumb img" href="images/portfolio/three-columns/003.jpg" rel="prettyPhoto[movies]">
+                                    <img src="http://cdn.iplayerhd.com/data/5/5944a895.jpg" alt="" />
+                                </a>
+                                <h5><a href="#">Carpal Tunnel</a></h5>
+                    
+                                <p>A <strong>break</strong> at work is a period of time during a shift in which 
+                                an employee is allowed to take time off from his/her</p>
+                                
+                                <a class="read-more" href="#">View Video</a>
+                            </li>
+                            <!-- END WORK -->
+                                   
+                            <!-- WORK -->
+                            <li class="hentry first">
+                                <a class="thumb img" href="images/portfolio/three-columns/004.jpg" rel="prettyPhoto[movies]">
+                                    <img src="images/portfolio/three-columns/004-thumb.jpg" alt="" />
+                                </a>
+                                <h5><a href="#">Tiramisu video</a></h5>
+                    
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
+                                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis</p>
+                    
+                                <p><a class="read-more" href="#">View Project</a></p>
+                            </li>
+                            <!-- END WORK -->
+                                   
+                            <!-- WORK -->
+                            <li class="hentry">
+                                <a class="thumb img" href="images/portfolio/three-columns/005.jpg" rel="prettyPhoto[movies]">
+                                    <img src="images/portfolio/three-columns/005-thumb.jpg" alt="" />
+                                </a>
+                                <h5><a href="#">Kalysphèra</a></h5>
+                    
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque 
+                                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et</p>
+                                
+                                <a class="read-more" href="#">View Project</a>
+                            </li>
+                            <!-- END WORK -->
+                                   
+                            <!-- WORK -->
+                            <li class="hentry last group">
+                                <a class="thumb img" href="images/portfolio/three-columns/006.jpg" rel="prettyPhoto[movies]">
+                                    <img src="images/portfolio/three-columns/006-thumb.jpg" alt="" />
+                                </a>
+                                <h5><a href="#">Impero Brand</a></h5>
+                    
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque 
+                                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et</p>
+                                
+                                <a class="read-more" href="#">View Project</a>
+                            </li>      
+                            <!-- END WORK --> 
+                       
+                        </ul>                
+                        <!-- END PORTFOLIO -->   
+            
+                        <!-- START PAGINATION -->                   
+                        <div class='general-pagination group'>
+                            <a href='#' class='selected'>1</a>
+                            <a href='#'>2</a>
+                            <a href='#'>&rsaquo;</a>
+                        </div>        
+                        <!-- END PAGINATION --> 
+                        
+                    </div>
+                    <!-- END CONTENT -->
+                    
+                </div>
+                <!-- END CONTENT -->

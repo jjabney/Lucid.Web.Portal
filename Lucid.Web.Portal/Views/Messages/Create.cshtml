@@ -1,55 +1,50 @@
-@model Lucid.Web.Portal.Models.ComposeEmailViewModel
+@model Lucid.Web.Portal.Models.Message
 
 @{
     ViewBag.Title = "Compose";
 }
 
+
 <h2>Compose</h2>
+<div style="margin-left:-450px; margin-top:-40px">
+
+   <section class="loginform cf">
 
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
-    <fieldset>
-        <legend>Message</legend>
+    
         
 
-<div class="editor-label">
-    @Html.LabelFor(model => model.Message.From)
-</div>
-<div>
-    @Html.TextBoxFor(model => model.Message.From, new { disabled = "disabled", @readonly = "readonly" })
-</div>
-<div class="editor-label">
-    @Html.LabelFor(model => model.Message.To)
-</div>
-<div class="editor-field">
-    @Html.EditorFor(model => model.Message.To)
-    @Html.ValidationMessageFor(model => model.Message.To)
-</div>
+          
+    @Html.HiddenFor(model => model.From)
+
+    @Html.LabelFor(model => model.To)
+
+    @Html.EditorFor(model => model.To)
     
-<div class="editor-label">
-    @Html.LabelFor(model => model.Message.Content)
-</div>
-<div class="editor-field">
-    @Html.TextAreaFor(model => model.Message.Content)
-    @Html.ValidationMessageFor(model => model.Message.Content)
-</div>
+    @Html.ValidationMessageFor(model => model.To)
+    <br />
+    @Html.LabelFor(model => model.Content)
 
-<div>
- @Html.ListBoxFor(
-    model => model.Selected,
-    new MultiSelectList(Model.Videos, "Id", "Title", Model.Selected)
-)
-</div>
+    @Html.TextAreaFor(model => model.Content)
+    @Html.ValidationMessageFor(model => model.Content)
 
 
 
 
-        <p>
+
+
+
+    <br />
+
+
+    
             <input type="submit" value="Send" />
-        </p>
-    </fieldset>
+       
+  
 }
-
+</section>
+</div>
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>

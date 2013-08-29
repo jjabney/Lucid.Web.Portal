@@ -1,0 +1,28 @@
+@model Lucid.Web.Portal.Models.TreatmentPlan
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>TreatmentPlan</legend>
+
+		@Html.Partial("_CreateOrEdit", Model)
+
+        <p>
+            <input type="submit" value="Next >>" />
+        </p>
+    </fieldset>
+}
+
+<div>
+  
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+

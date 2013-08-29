@@ -56,10 +56,7 @@ namespace Lucid.Web.Portal.Models
     [DataContract]
     public class RegisterModel
     {
-        [Required]
-        [Display(Name = "User name")]
-        public string UserName { get; set; }
-
+      
         [Required]
         [DataType(DataType.EmailAddress)]
         [Display(Name = "Email address")]

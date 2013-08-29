@@ -25,6 +25,17 @@ namespace Lucid.Web.Portal.Controllers
             return View("Login");
         }
 
+
+        public ActionResult Contact()
+        {
+            return View();
+        }
+
+
+        public ActionResult About()
+        {
+            return View();
+        }
        
     }
 }

@@ -19,5 +19,7 @@ namespace Lucid.Web.Portal.Models
 
         [Required]
         public string DesktopUrl { get; set; }
+
+        public string Thumb { get; set; }
     }
 }

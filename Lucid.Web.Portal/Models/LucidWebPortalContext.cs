@@ -17,11 +17,7 @@ namespace Lucid.Web.Portal.Models
         // 
         public LucidWebPortalContext()
         {
-        
-                System.Data.Entity.Database.SetInitializer(new LucidWebPortalContextInitializer());
-
-                
-              
+            System.Data.Entity.Database.SetInitializer(new LucidWebPortalContextInitializer());
         }
 
     
@@ -30,5 +26,8 @@ namespace Lucid.Web.Portal.Models
 
         public DbSet<Lucid.Web.Portal.Models.Video> Videos { get; set; }
 
+        public DbSet<Lucid.Web.Portal.Models.TreatmentPlan> TreatmentPlans { get; set; }
+
+        public DbSet<Lucid.Web.Portal.Models.Treatment> Treatments { get; set; }
     }
 }

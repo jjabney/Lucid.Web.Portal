@@ -144,6 +144,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
+    <Compile Include="Controllers\TreatmentPlanController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Controllers\VideosController.cs" />
     <Compile Include="Global.asax.cs">
@@ -157,12 +158,30 @@
     <Compile Include="Models\LucidWebPortalContextInitializer.cs" />
     <Compile Include="Models\Message.cs" />
     <Compile Include="Models\MessageRepository.cs" />
+    <Compile Include="Models\Treatment.cs" />
+    <Compile Include="Models\TreatmentPlan.cs" />
+    <Compile Include="Models\TreatmentPlanRepository.cs" />
     <Compile Include="Models\Video.cs" />
     <Compile Include="Models\VideoRepository.cs" />
     <Compile Include="Models\VideoViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\colorpicker.css" />
+    <Content Include="Content\custom-style.css" />
+    <Content Include="Content\editor-style-rtl.css" />
+    <Content Include="Content\editor-style.css" />
+    <Content Include="Content\index.html" />
+    <Content Include="Content\lessthen480.css" />
+    <Content Include="Content\lessthen600.css" />
+    <Content Include="Content\lessthen800.css" />
+    <Content Include="Content\prettyPhoto.css" />
+    <Content Include="Content\slider-cycle.css" />
+    <Content Include="Content\slider-elastic.css" />
+    <Content Include="Content\slider-elegant.css" />
+    <Content Include="Content\slider-nivo.css" />
+    <Content Include="Content\slider-thumbnails.css" />
+    <Content Include="Content\style.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -217,14 +236,55 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\tipsy.css" />
+    <Content Include="Content\ui.jqgrid.css" />
+    <Content Include="Scripts\grid.locale-en.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Images\grid-hrow.gif" />
+    <Content Include="Images\grid-loading-done.gif" />
+    <Content Include="Images\grid-loading.gif" />
+    <Content Include="Images\grid-split.gif" />
+    <Content Include="Images\indicator_web20_working.gif" />
+    <Content Include="Images\load-bg.png" />
+    <Content Include="Images\l_logo1.jpg" />
+    <Content Include="Images\page-bg.gif" />
+    <Content Include="Images\page-first.png" />
+    <Content Include="Images\page-last.png" />
+    <Content Include="Images\page-next.png" />
+    <Content Include="Images\page-prev.png" />
+    <Content Include="Images\sort-asc.png" />
+    <Content Include="Images\sort-desc.png" />
+    <Content Include="Images\sort-none.png" />
     <Content Include="lib\CodeScales.Http.dll" />
+    <Content Include="Scripts\contact.js" />
+    <Content Include="Scripts\cufon-yui.js" />
+    <Content Include="Scripts\halo.cufon.js" />
+    <Content Include="Scripts\jqFancyTransitions.min.js" />
     <Content Include="Scripts\jquery-1.7.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery-1.9.0.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.aw-showcase.js" />
+    <Content Include="Scripts\jquery.custom.js" />
+    <Content Include="Scripts\jquery.cycle.min.js" />
+    <Content Include="Scripts\jquery.easing.1.3.js" />
+    <Content Include="Scripts\jquery.eislideshow.js" />
+    <Content Include="Scripts\jquery.flexslider.min.js" />
+    <Content Include="Scripts\jquery.hrzAccordion.js" />
+    <Content Include="Scripts\jquery.ingrid-0.9.9-min.js" />
+    <Content Include="Scripts\jquery.jcarousel.min.js" />
+    <Content Include="Scripts\jquery.jqGrid.min.js" />
+    <Content Include="Scripts\jquery.jqGrid.src.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.nivo.slider.pack.js" />
+    <Content Include="Scripts\jquery.prettyPhoto.js" />
+    <Content Include="Scripts\jquery.quicksand.js" />
+    <Content Include="Scripts\jquery.slides.min.js" />
+    <Content Include="Scripts\jquery.tipsy.js" />
+    <Content Include="Scripts\jquery.tweetable.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate-vsdoc.js" />
@@ -236,6 +296,7 @@
     <Content Include="Scripts\knockout-2.1.0.debug.js" />
     <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\swfobject.js" />
     <Content Include="Unity.Mvc3.README.txt" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -326,6 +387,33 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Videos\_CreateOrEdit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TreatmentPlan\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TreatmentPlan\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TreatmentPlan\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TreatmentPlan\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TreatmentPlan\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TreatmentPlan\_CreateOrEdit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TreatmentPlan\CreateTreatments.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Contact.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\About.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

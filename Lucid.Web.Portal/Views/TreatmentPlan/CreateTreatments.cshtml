@@ -1,0 +1,18 @@
+﻿@model Lucid.Web.Portal.Models.TreatmentPlan
+@{
+    ViewBag.Title = "CreateTreatments";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>CreateTreatments</h2>
+
+@foreach (var item in Model.Treatments) {
+    
+    
+    
+    <div class="editor-field">
+    
+    
+       @Html.CheckBox(item.Title )  @Html.Label(item.Title)
+    </div>
+}

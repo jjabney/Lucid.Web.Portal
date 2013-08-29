@@ -94,8 +94,8 @@ namespace Lucid.Web.Portal.Controllers
             if (Request.QueryString["u"] != null && Request.QueryString["r"] != null)
             {
                 RegisterModel model = new RegisterModel();
-                model.UserName  = Security.DES_decrypt(Request.QueryString["u"]);
-                model.Email = model.UserName;
+                //model.UserName  = Security.DES_decrypt(Request.QueryString["u"]);
+               // model.Email = model.UserName;
                 model.AccessCode = Security.DES_decrypt(Request.QueryString["r"]);
                 return View(model);
              }
@@ -115,26 +115,26 @@ namespace Lucid.Web.Portal.Controllers
                if(!String.IsNullOrEmpty( Membership.GetUserNameByEmail(model.Email)))
                {
                    ModelState.AddModelError("UAE","E-Mail address already exists");
-                   return View("activate",model);
+                   return View(model);
                }
 
                 // Attempt to register the user
                 MembershipCreateStatus createStatus;
-                Membership.CreateUser(model.UserName, model.Password, model.Email, passwordQuestion: null, passwordAnswer: null, isApproved: true, providerUserKey: null, status: out createStatus);
+                Membership.CreateUser(model.Email, model.Password, model.Email, passwordQuestion: null, passwordAnswer: null, isApproved: true, providerUserKey: null, status: out createStatus);
 
-                switch(model.AccessCode)
+                switch(model.AccessCode.ToLower())
                 {
-                    case "Chiropractor":
-                    Roles.AddUserToRole(model.UserName, "Chiropractor");
+                    case "chiro":
+                    Roles.AddUserToRole(model.Email, "Chiropractor");
                     break;
-                    case "Patient":
-                    Roles.AddUserToRole(model.UserName, "Patient");
+                    case "patient":
+                    Roles.AddUserToRole(model.Email, "Patient");
                     break;
 
                 }   
                 if (createStatus == MembershipCreateStatus.Success)
                 {
-                    FormsAuthentication.SetAuthCookie(model.UserName, createPersistentCookie: false);
+                    FormsAuthentication.SetAuthCookie(model.Email, createPersistentCookie: false);
                     return RedirectToAction("Index", "Messages");
                 }
                 else

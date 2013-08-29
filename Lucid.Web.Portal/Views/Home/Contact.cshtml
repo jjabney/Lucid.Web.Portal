@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="content" class="layout-sidebar-right group">
+                
+                    <!-- START PRIMARY -->
+                    <div id="primary" class="hentry group wrapper-content" role="main">
+                    
+                        <h2>Contact</h2>
+
+<div class="widget-first widget widget_text">
+                            
+                       
+                                <!-- The feedback message is here -->
+                        	<div class="usermessagea"></div>
+                        	
+                        	<fieldset>
+                        
+                        		<ul>
+                        
+                                    <!-- NAME FIELD -->
+                        			<li class="text-field">
+                        				<label for="name-main">
+                        					<span class="label">What's your <span class="highlight-text">name</span>?</span>
+                        				</label>
+                        				
+                        				<input type="text" name="name" id="name-form" class="required" value="" />                   
+                        				<div class="msg-error"></div>
+                        			</li>            
+                                    <!-- END NAME FIELD -->
+                                    
+                                    <!-- EMAIL FIELD -->
+                        			<li class="text-field">
+                        				<label for="email-main">
+                        					<span class="label">What's your <span class="highlight-text">e-mail</span>?</span> 
+                        				</label>
+                        
+                        				<input type="text" name="email" id="email-form" class="required email-validate" value="" />
+                        				<div class="msg-error"></div>
+                        			</li>   
+                                    <!-- END EMAIL FIELD -->
+                                    
+                                    <!-- MESSAGE FIELD -->
+                        			<li class="textarea-field">
+                        				<label for="message-main">
+                        					<span class="label">How can I <span class="highlight-text">help</span> you?</span>
+                        				</label>
+                        				
+                        				<textarea name="message" id="message-form" rows="8" cols="30" class="required"></textarea>
+                        				<div class="msg-error"></div>
+                        			</li>      
+                                    <!-- END MESSAGE FIELD -->
+                                    
+                                    <!-- SUBMIT FIELD -->
+                        			<li class="submit-button">
+                        				<input type="hidden" name="action" value="sendmail" id="action" />
+                        				<input type="submit" name="sendmail" value="send message" class="sendmail alignleft" />			
+                                    </li>
+                        		</ul>
+                        
+                        	</fieldset>
+                            
+                        </div>            
+                        </div>
+                        </div>

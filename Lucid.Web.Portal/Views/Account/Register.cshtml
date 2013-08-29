@@ -5,69 +5,55 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<p>
-    Passwords must be at least @Membership.MinRequiredPasswordLength characters long.
-</p>
+<div style="margin-left:-400px; margin-top:-70px">
+
+  <section class="loginform cf">
+
+    Passwords must be at least @Membership.MinRequiredPasswordLength characters long.<br />
+
 
 @using (Html.BeginForm()) {
     @Html.ValidationSummary()
+    
+    <ul  >
+  
 
-    <ul  style="list-style-type:none;">
-     
+     <li> @Html.LabelFor(m => m.Email) 
+            @Html.TextBoxFor(m => m.Email)  </li>
 
-        <li >
-            @Html.LabelFor(m => m.UserName)
-       
-        </li>
+ <li> @Html.LabelFor(m => m.AccessCode)
+             @Html.TextBoxFor(m => m.AccessCode)  </li>
 
-        <li >
-            @Html.TextBoxFor(m => m.UserName)            
-        </li>
-
-        <li >
-            @Html.LabelFor(m => m.Email)
-                    
-        </li>
-
-
-        <li>
-             @Html.TextBoxFor(m => m.Email)   
-        </li>
-        
-        <li >
-            @Html.LabelFor(m => m.AccessCode)
-          
-        </li>
-
-            <li >
-   
-            @Html.TextBoxFor(m => m.Email)            
-        </li>
-
-        <li >
+ <li>
             @Html.LabelFor(m => m.Password)
-            
-        </li>
+            @Html.PasswordFor(m => m.Password)    </li>
 
-        <li >
-     
-            @Html.PasswordFor(m => m.Password)            
-        </li>
-
-
-        <li >
+            <li>
             @Html.LabelFor(m => m.ConfirmPassword)
                 
-        </li>
-
-                <li >
+        
   
-            @Html.PasswordFor(m => m.ConfirmPassword)            
-        </li>
+            @Html.PasswordFor(m => m.ConfirmPassword)          
+            </li>
 
-
-        <li >
-            <input type="submit" value="Register" />
-        </li>
     </ul>
-}
+    
+                     
+       
+              
+       
+            
+       
+           
+          
+      
+   
+                  
+              
+       
+              
+       
+            <input type="submit" value="Register" />}
+
+      </section>
+      </div>

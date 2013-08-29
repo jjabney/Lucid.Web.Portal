@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Lucid.Web.Portal.Models;
+using System.Web.Helpers;
 
 namespace Lucid.Web.Portal.Controllers
 {   
@@ -26,6 +27,7 @@ namespace Lucid.Web.Portal.Controllers
         [Authorize(Roles="Patient,Chiropractor,Admin")]
         public ViewResult Index()
         {
+            
             return View(videoRepository.All);
         }
 
